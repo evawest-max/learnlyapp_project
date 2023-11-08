@@ -1,0 +1,67 @@
+.profileContainer{
+    text-align: center;
+    color: purple;
+}
+#profile-welcome{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: orange;
+}
+#profile-name{
+    font-size: 16px;
+}
+#profile-links{
+    
+}
+#profile-links div{
+
+}
+#sign-out-button{
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    margin: 0px 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+#edit-button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 5px 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+#delete-button{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 0px 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.profileContainer{
+    text-align: center;
+}
+.edit-form-container{
+    
+    border: none;
+}
+.edit-form-container form{
+    width: 100%;
+    
+}
+.edit-form-container label{
+    font-size: medium;
+}
+.edit-form-container input{
+    margin: 0px 20px;
+    min-width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    height: 30px;
+}

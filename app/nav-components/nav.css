@@ -1,0 +1,240 @@
+
+.everything{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: white;
+}
+.login-container a p{
+    width: 15px;
+    height: 15px;
+}
+.Sign-menu div{
+    position: relative;
+}
+.nav-transparent-background{
+    position: absolute;
+    margin-right: 20px;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.2;
+}
+.navcontainer-mobile{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 3;
+    right: 10px;
+}
+.navcontainer-mobile nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 0px 60px;
+    margin-top: 40px;  
+}
+
+
+.navcontainer-mobile nav ul a{
+    color: purple;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    animation: fade-slide-left 1s ease-in-out forwards;
+    color: white;
+    margin: 30px 0px;
+    text-align: center;
+}
+.navcontainer-mobile nav ul a.active{
+    background-color: orange;
+    border-radius: 5px;
+    padding: 2px 10px;
+    color: white;
+}
+.menubutton-mobile{
+    align-self: end;
+    margin-right: 0px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: purple;
+    animation: fade-slide-right 1s cubic-bezier(0,1,0,1) forwards;
+}
+.Sign-menu nav ul div {
+    align-items: center;
+    display: flex;
+    margin: 80px 0px;
+    flex-direction: column;
+    width: 200px;
+    
+}
+.Sign-menu nav .menubutton-mobile{
+    color: white;
+    right: 10px;
+}
+.Sign-menu nav {
+    position: fixed;
+    background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(86, 2, 98), #01000A 100%);
+    animation: fade-slide-right ease-in-out forwards;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: 100vh;
+    right: 0px;
+    top: 0px;   
+}
+
+.navcontainer{
+    color: black;
+    display: none;
+    flex-direction: row;
+    margin: 0px 200px;
+    width: 580px;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-right: 172;
+    cursor: pointer;
+}
+.login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: self-start;
+    font-size: 16px;
+    color: purple;
+    margin-top: 39px;
+    margin-right: 50px;
+    height: 18px;
+}
+.login-container a{
+    text-decoration: none;
+}
+.login-container div{
+    margin-top: 0px;
+    color: purple;
+    font-size: 12px;
+}
+.login-container p{
+    margin-top: 0px;
+    font-size: 12px;
+    color: purple;
+    font-weight: 800px;
+    
+}
+
+
+
+
+
+@media screen and (min-width:390px){
+    
+}
+
+@media screen and (min-width:540px){
+    }
+
+@media screen and (min-width:900px){
+    .everything{
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: white;
+    }
+    .navcontainer-mobile{
+        display: none;
+        animation: slide 0.5s forwards;
+        animation-delay: 2s;
+        -webkit-animation: slide-out 2s forwards;
+    }
+
+    .navcontainer{
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px 160px;
+        margin-top: 10px;
+        width: fit-content;
+        
+    }
+    .navcontainer nav{
+        min-width: 380px;
+    }
+    .navcontainer nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px;
+        padding: 0px 20px;
+        width: fit-content;
+        
+    }
+    .navcontainer nav ul a{
+        color: purple;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+        
+    }
+
+    .navcontainer nav ul a.active{
+        background-color: orange;
+        border-radius: 5px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+        margin-right: 172;
+        cursor: pointer;
+    }
+    .login-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: self-start;
+        font-size: 16px;
+        color: purple;
+        margin-top: 10px;
+        margin-right: 0px;
+        height: 30px;  
+    }
+    .login-container a p{
+        text-decoration: none;
+        color: purple;
+        
+    }
+    .login-container div{
+        margin-top: 0px;
+        color: purple;
+        font-size: 23px;
+        cursor: pointer;
+    }
+    .login-container p{
+        font-size: 16px;
+        color: purple;
+        font-weight: 800px;
+        cursor: pointer;   
+    }
+}
+
+

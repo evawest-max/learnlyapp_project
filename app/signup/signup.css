@@ -1,0 +1,123 @@
+#signup-container{
+    background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(49, 1, 61), #01000A 100%);
+    padding: 20px 0px;
+    
+}
+
+.signup-title{
+    color:white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.signup{
+    align-items: center;
+    background-color: #ededfa;
+}
+#signup-Form-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.signup-form{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.signup-form label{
+    text-align: left;
+    font-size: 16px;
+    color: white;
+}
+.signup-form input{
+    padding: 10px 10px;
+    text-align: left;
+    outline: none;
+    border-radius: 5px;
+}
+.signup-button{
+    cursor: pointer;
+    align-self: center;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-family: Raleway;
+    padding: 10px 30px;
+    margin: 0px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.signup-option-picture{
+    width: fit-content;
+    align-self: center;
+    
+    font-size: 40px;
+}
+.sign-in-button{
+    color: White;
+}
+.sign-in-button a{
+    color: rgb(172, 153, 245);
+    text-decoration: underline;
+}
+
+@media screen and (min-width:900px){
+    .signup-title{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color:purple
+    }
+    .signup{
+        /* align-items: center; */
+        
+        border: 3px solid;
+        background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(48, 1, 61), #01000A 100%);
+    }
+    #signup-Form-container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-self: center;
+        text-align: center;
+        margin: 10px 400px;
+        max-width: 700px;
+        min-width: 500px;
+        align-self: center;
+        background-color: white;
+        border-radius: 10PX;
+    }
+    .signup-form{
+        
+        margin: 0px 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .signup-form label{
+        text-align: left;
+        font-size: 16px;
+        color: purple;
+    }
+    .signup-form input{
+        padding: 10px 10px;
+        text-align: left;
+        border: 1px solid purple;
+    }
+    .signup-button{
+        width: 300px;
+        align-self: center;
+        background-color: orange;
+        color: white;
+        font-size: 18px;
+        font-family: Raleway;
+        border-radius: 5px;
+    }
+    .signup-option-picture{
+        width: fit-content;
+        align-self: center;
+        font-size: 40px;
+    }
+    .sign-up-button div{
+        color: blue;
+        cursor: pointer;
+    }
+}

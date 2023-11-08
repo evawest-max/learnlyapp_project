@@ -1,0 +1,134 @@
+
+.login{
+    align-items: center;
+    background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(78, 1, 97), #01000A 100%);
+}
+.login-title{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+.signinalert{
+    color: rgba(0, 255, 0, 0.858);
+}
+#login-Form-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.login-form{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.login-form label{
+    text-align: left;
+    font-size: 16px;
+    color: white;
+}
+.login-form input{
+    padding: 10px 10px;
+    text-align: left;
+    outline: none;
+    border-color: purple;
+    border-radius: 10px;
+}
+.login-forgot-password{
+    color: white;
+}
+.login button{
+    width: fit-content;
+    align-self: center;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-family: Raleway;
+    padding: 5px 40px;
+    margin: 20px 30px;
+    border-radius: 5px;
+}
+.login-options{
+    color: white;
+}
+.login-option-picture{
+    width: fit-content;
+    align-self: center;
+    
+    font-size: 40px;
+}
+.sign-up-button p{
+    color: white;
+}
+.sign-up-button a{
+    color: rgb(172, 153, 245);
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width:900px){
+    .login{
+        align-items: center;
+        border: 3px solid;
+        background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(71, 1, 74), #01000A 100%);
+    }
+    .login-title{
+        font-weight: bold;
+        color: purple;
+    }
+    #login-Form-container{
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+        margin: 110px 300px;
+        background-color: white;
+        border-radius: 10PX;
+    }
+    .login-form{
+        
+        margin: 0px 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .login-form label{
+        text-align: left;
+        font-size: 16px;
+        color: purple;
+    }
+    .login-form input{
+        padding: 10px 10px;
+        text-align: left;
+        border: 2px solid purple;
+    }
+    .login-forgot-password{
+        color: purple;
+    }
+    .login-options{
+        color: purple;
+    }
+    .login-button{
+        width: 900px;
+        align-self: center;
+        background-color: orange;
+        color: white;
+        font-size: 18px;
+        font-family: Raleway;
+        border-radius: 5px;
+        padding: 5px 0px;
+    }
+
+    .login-option-picture{
+        width: fit-content;
+        align-self: center;
+        
+        font-size: 40px;
+    }
+    .sign-up-button p{
+        color: white;
+    }
+    .sign-up-button a{
+        color: rgb(172, 153, 245);
+        text-decoration: underline;
+    }
+}

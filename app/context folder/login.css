@@ -1,0 +1,32 @@
+.login-container{
+    margin-right: 5px;
+}
+.login-container a p{
+    font-size: 10px;
+    width: fit-content;
+    height: 20px;
+    cursor: pointer;
+}
+.login-container img{
+    width: 18px;
+    height: 18px;
+}
+
+@media screen and (min-width:900px){
+    .login-container{
+        right: 5px;
+        margin-right: 5px;
+    }
+    .login-container a p{
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        width: fit-content;
+        height: 20px;
+        cursor: pointer;
+    }
+    .login-container img{
+        width: 25px;
+        height: 25px;
+    }
+}
