@@ -37,8 +37,6 @@ function UserProfile() {
       setdeleteButton(<button id='delete-button' onClick={switchDeletebutton}>Delete my account</button>)
     }
 
-    const [alerttexts, setalerttexts]=useState("use the form")
-    const [alerttextcolors, setalerttextscolors]=useState()
     const [namebordercolors, setnamebordercolors]=useState()
     const [phonenumberbordercolors, setphonenumberbordercolors]=useState()
     
@@ -52,9 +50,9 @@ function UserProfile() {
         <p>Ensure name is more than 3 letters <br/> and phonenumber is 11 digits </p>
         <form >
           <label>New name</label><br/>
-          <input type='text' onBlur={validate} style={namebordercolors} ref={nameref} placeholder='your new name' required id='editInput'/><br/>
+          <input type='text' ref={nameref} placeholder='your new name' required id='editInput'/><br/>
           <label>New phonenumber</label><br/>
-          <input type='number' onBlur={validate} style={phonenumberbordercolors} ref={phoneref} Placeholder='Phonenumber' required id='editInput'/><br/>
+          <input type='number' ref={phoneref} Placeholder='Phonenumber' required id='editInput'/><br/>
         </form>
         <button onClick={saveNewUserData} id='edit-button'>Save</button>
         <button onClick={cancelEdit} id='edit-button'>Cancel</button>
@@ -64,25 +62,11 @@ function UserProfile() {
       setEditButton(<button onClick={editaccount} id='edit-button'>Edit my account</button>)
             
     }
-    function validate(){
-      if (nameref.current.value.length>4){
-        setnamebordercolors({border: "6px solid green"})
-        setalerttextscolors({color: "green"})
-        setalerttexts("Update successfull")
-        
-      }
-      if (phoneref.current.value.length===11){
-          setalerttextscolors({color: "green"})
-          setphonenumberbordercolors({border: "2px solid green"})
-          setalerttexts("Update successfull")
-      }
-    }
+    
     function saveNewUserData(){
       if (nameref.current.value.length>4){
         if (phoneref.current.value.length===11){
-          setalerttextscolors({color: "green"})
-          setphonenumberbordercolors({border: "2px solid green"})
-          setalerttexts("Update successfull")
+          
           users.map((item)=>{
             let check=JSON.parse(localStorage.getItem('loggedinUser'))
             if (item.id===check.id){
@@ -92,15 +76,12 @@ function UserProfile() {
               setEditButton(<button onClick={editaccount} id='edit-button'>Edit my account</button>)
             }
           })
+          alert("Update successfull")
         }else{
-          setalerttextscolors({color: "red"})
-          setphonenumberbordercolors({border: "2px solid red"})
-          setalerttexts("invalid phone number, 11 numbers only!")
+          alert("please makesure phone number is equal to 11 numbers")
         }
       }else{
-        setalerttextscolors({color: "red"})
-        setnamebordercolors({border: "2px solid red"})
-        setalerttexts("Fullname must be longer than 4 letters.")
+        alert("please makesure name is more than 4 letters")
       }
     }
     function cancelEdit(){
