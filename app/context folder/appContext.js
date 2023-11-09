@@ -73,6 +73,7 @@ function Cartprovider({children}) {
   }
 
   function deleteUserAccount(index){
+    localStorage.removeItem('loggedinUser')
     localStorage.removeItem('account')
     users.splice(index, 1)
     setuserloggedin({pendingDispute:[]})
