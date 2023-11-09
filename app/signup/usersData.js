@@ -24,11 +24,11 @@ let users=[
     },
     {
         id:1,
-        name:"Mojisola Akinwumi",
-        email:"akinwumi@gmail.com",
-        password:"34567ebu",
-        phonenumber: "07032397184",
-        numberOfOrders:88,
+        name:"Learnly",
+        email:"learnly@gmail.com",
+        password:"learnly@",
+        phonenumber: "07000000000",
+        numberOfOrders:1,
         pendingDispute:[
             {
                 id:0,
