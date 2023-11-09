@@ -108,7 +108,7 @@ function Signup() {
                       users.push(newuser)
                       localStorage.setItem('account',JSON.stringify(users))
                     }
-                    // console.log(users)
+                    console.log(users)
                     
                     setnamebordercolor({border: "2px solid green"})
                     setphonenumberbordercolor({border: "2px solid green"})

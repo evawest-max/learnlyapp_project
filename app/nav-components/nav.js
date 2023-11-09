@@ -40,7 +40,7 @@ function Navbar() {
     newMenuState(<div className="menubutton-mobile" onClick={openMenu}><img src="https://static.thenounproject.com/png/5238032-200.png" alt="open menu" width="25px"/></div>)
   }
   
-  localStorage.setItem('test', JSON.stringify(users))
+
   
   return (
     
