@@ -5,10 +5,6 @@ import { useContext } from "react"
 import { Cartcontext } from "./context folder/appContext"
 import movies from "./moviesData"
 import Movie from "./movie/movieCard"
-// import { render } from "react-dom";
-
-
-
 
 // const url = 'https://movie-database-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1';
 // const options = {
@@ -29,7 +25,7 @@ import Movie from "./movie/movieCard"
 
 
 export default function Home() {
-  const cart=useContext(Cartcontext)
+  const movie=useContext(Cartcontext)
     let [moviesMaped, setmoviesMaped]=useState(movies.map((items, index)=>{
         
         return(
@@ -57,7 +53,7 @@ export default function Home() {
 
     return(
         <div className="searchcontainer">
-            <div className="SearchbarContainer" style={cart.changeINdex}>
+            <div className="SearchbarContainer" style={movie.changeINdex}>
                 <input onChange={findMovie} ref={inputRef} type="text" placeholder="Filter movies by title"/>
             </div>
             

@@ -51,7 +51,7 @@
 }
 .movie-button{
     width: 90%;
-    height: 28px;
+    padding: 5px 0px;
     border-radius: 5px;
     color: white;
     font-weight: 800;
@@ -112,7 +112,6 @@
     }
     .movie-button{
         width: 90%;
-        height: 28px;
         border-radius: 5px;
         color: white;
         font-weight: 800;
@@ -172,7 +171,6 @@
     }
     .movie-button{
         width: 90%;
-        height: 28px;
         border-radius: 5px;
         color: white;
         font-weight: 800;
@@ -233,7 +231,6 @@
     }
     .movie-button{
         width: 90%;
-        height: 28px;
         border-radius: 10px;
         background: #FA9807;
         color: white;
@@ -298,7 +295,6 @@
     }
     .movie-button{
         width: 90%;
-        height: 40px;
         
         border-radius: 10px;
         background: #FA9807;
@@ -364,8 +360,6 @@
     }
     .movie-button{
         width: 90%;
-        height: 40px;
-        
         border-radius: 10px;
         background: #FA9807;
         color: white;

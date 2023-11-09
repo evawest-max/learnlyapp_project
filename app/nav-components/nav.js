@@ -1,12 +1,10 @@
 "use client"
 import "./nav.css";
 import { useState } from "react";
-
 import { useContext } from "react";
 import { Cartcontext } from "../context folder/appContext";
 import Link from "next/link";
 
-//import CartIcon from "../cart component/cartIcon";
 
 let signup="sign in"
 let signstate=true

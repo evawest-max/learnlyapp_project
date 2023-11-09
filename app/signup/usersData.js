@@ -10,7 +10,7 @@ let users=[
             {
                 id:0,
                 transction_refrence_id: 333278493,
-                comments:"i made payment for a plate of rice and chicken from Mr edible, but the food was not delivered to me till now.",
+                comments:"",
                 date_of_transaction: "20/02/2023",
             },
             {
@@ -33,7 +33,7 @@ let users=[
             {
                 id:0,
                 transction_refrence_id: 936928493,
-                comments:"i made payment for a plate of rice and chicken from Mr edible, but the food was not delivered to me till now.",
+                comments:".",
                 date_of_transaction: "20/02/2023",
             },
             
@@ -56,7 +56,7 @@ let users=[
             },{
                 id:1,
                 transction_refrence_id: 9955338493,
-                comments:"i made payment for a plate of rice and chicken from Mr edible, but the food was not delivered to me till now.",
+                comments:"",
                 date_of_transaction: "20/02/2023",
             }
         ],
