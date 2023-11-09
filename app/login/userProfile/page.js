@@ -19,12 +19,13 @@ function UserProfile() {
       setdeleteButton(<div>
         <h3>Are you sure? <br/>if you delete account all your records will be lost for ever.</h3>
         <div>
-          <Link href="/signup-page"><button onClick={deleteAccount} id='delete-button'>Yes</button></Link>
+          <Link href="/signup"><button onClick={deleteAccount} id='delete-button'>Yes</button></Link>
           <button onClick={switchBackToDeletebutton} id='edit-button'>No</button>
         </div>
       </div>)
     }
     function deleteAccount(){
+      localStorage.removeItem('account')
       users.map((item, index)=>{
         if (item.id===cart.currentUser.id){
           cart.deleteUserAccount(index)
@@ -111,7 +112,7 @@ function UserProfile() {
         <p id='profile-name'>{user.name} <br/>{user.email},   {user.phonenumber}</p>
         <div id='profile-links'>
           <div>
-            <p>Pending disputes:{user.pendingDispute.length}</p>
+            <p>Pending disputes:0</p>
           </div>
           <div>
             <p>Learnly Points:{user.learnlyPoints}</p>
@@ -122,7 +123,6 @@ function UserProfile() {
         </Link>
         {deleteButton}
         {editButton}
-        <button id='sign-out-button'>Change password</button>
     </div>
   )
 }

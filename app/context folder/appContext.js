@@ -73,6 +73,7 @@ function Cartprovider({children}) {
   }
 
   function deleteUserAccount(index){
+    localStorage.removeItem('account')
     users.splice(index, 1)
     setuserloggedin({pendingDispute:[]})
     setloginIcon(
@@ -102,8 +103,14 @@ function Cartprovider({children}) {
       </div>)
     console.log("windows is working")
   }
+  if (localStorage.getItem('account') !== null){
+    let accountDataFromLocalStorage=localStorage.getItem('account')
+    users.push(JSON.parse(accountDataFromLocalStorage))
+    
+    console.log(users)
+  }
  }
-
+// localStorage.clear()
   const contextvalue={
     currentUser: userloggedin,
     loginIcon:loginIcon,

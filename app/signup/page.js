@@ -35,18 +35,16 @@ function Signup() {
               if (emailref.current.value.includes("@") && !userexist){
                 if (createpasswordref.current.value===confirmpasswordref.current.value && confirmpasswordref.current.value.length>=6){
                   if (confirmpasswordref.current.value.includes(",")||confirmpasswordref.current.value.includes("@") ||confirmpasswordref.current.value.includes("#") ||confirmpasswordref.current.value.includes("$")||confirmpasswordref.current.value.includes("%")){
-                    if(localStorage.getItem("account",)!== null){
-                      let usersUpdated=JSON.parse(localStorage.getItem("account"))
-                      usersUpdated.push({
-                        id:users[users.length-1].id+1,
-                        name:nameref.current.value,
-                        email:emailref.current.value,
-                        password:createpasswordref.current.value
-                      })
-                      JSON.stringify(localStorage.setItem("account",usersUpdated ))
-                    }else{
-                      JSON.stringify(localStorage.setItem("account",users))
+                    let newaccount={
+                      id:users[users.length-1].id+1,
+                      name:nameref.current.value,
+                      email:emailref.current.value,
+                      password:createpasswordref.current.value
                     }
+                    let stringobj=JSON.stringify(newaccount)
+                    localStorage.setItem("account",stringobj )
+                    console.log(stringobj)
+                    
                     setnamebordercolor({border: "2px solid green"})
                     setphonenumberbordercolor({border: "2px solid green"})
                     setemailbordercolor({border: "2px solid green"})

@@ -55,9 +55,7 @@ export default function Home() {
         <div className="searchcontainer">
             <div className="SearchbarContainer" style={movie.changeINdex}>
                 <input onChange={findMovie} ref={inputRef} type="text" placeholder="Filter movies by title"/>
-            </div>
-            
-            
+            </div>   
             <div className="filterAndMovieContainer">
                 <div className="movie-container">
                     {moviesMaped}
