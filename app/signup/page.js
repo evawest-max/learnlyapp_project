@@ -12,7 +12,7 @@ function Signup() {
     let createpasswordref=useRef()
     let confirmpasswordref=useRef()
     
-    let userexist=false
+    
 
     const [alerttext, setalerttext]=useState()
     const [alerttextcolor, setalerttextcolor]=useState()
@@ -62,7 +62,7 @@ function Signup() {
         setalerttext("password must include one of this symbols', @ # $ %' and longer than 6 characters")
       }
     }
-    
+    let userexist=false
     const registerUser= ()=>{
       for (let i=0; i<users.length; i++){
         if (users[i].email === emailref.current.value){
