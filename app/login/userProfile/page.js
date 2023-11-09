@@ -68,7 +68,7 @@ function UserProfile() {
         setnamebordercolors({border: "6px solid green"})
         setalerttextscolors({color: "green"})
         setalerttexts("Update successfull")
-        console.log("checked")
+        
       }
       if (phoneref.current.value.length===11){
           setalerttextscolors({color: "green"})

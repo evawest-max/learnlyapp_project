@@ -35,7 +35,8 @@
     border-radius: 10px;
 }
 .login-forgot-password{
-    color: white;
+    color: rgb(172, 153, 245);
+    cursor: pointer;
 }
 .login button{
     width: fit-content;
@@ -102,7 +103,8 @@
         border: 2px solid purple;
     }
     .login-forgot-password{
-        color: purple;
+        color: rgb(172, 153, 245);
+        cursor: pointer;
     }
     .login-options{
         color: purple;

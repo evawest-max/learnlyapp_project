@@ -1,20 +1,20 @@
 "use client"
-import React, { createContext } from 'react'
+import React, { createContext, useEffect } from 'react'
 import { useState } from 'react'
 import users from '../signup/usersData'
 import Link from 'next/link'
 import "./login.css"
 
 
-let cartproducts=[]
+
 let changes=false
 export const Cartcontext= createContext({
   currentUser: 0,
   loginIcon:0,
-  casechange:changes,
+  // casechange:changes,
   changeINdex:0,
-  totalItemInCart:0,
-  items:cartproducts,
+  // totalItemInCart:0,
+  // items:cartproducts,
   changeZ:()=>{},
   switchToUser:()=>{},
   signout:()=>{},
@@ -83,29 +83,33 @@ function Cartprovider({children}) {
         </Link>
       </div>)
   }
-  window.onload=function calluser(){
-    if (localStorage.getItem('loggedinUser') !== null){
-      let userDataFromLocalStorage=JSON.parse(localStorage.getItem('loggedinUser'))
-      userloggedindisplay=userDataFromLocalStorage
-      setuserloggedin(userDataFromLocalStorage)
-      console.log(userDataFromLocalStorage)
-      setloginIcon(
-        <div className="login-container">
-          <img src={`https://robohash.org/nmn ${userDataFromLocalStorage.id}`} alt='user robot image' width="30px"/>
-          <Link href="/login/userProfile">
-          <p>{userDataFromLocalStorage.name}</p>
-          </Link>
-        </div>)
-      console.log("windows is working")
-    }
+  useEffect(() => {
+    keepuserloggedin()
+ }, []);
+
+ function keepuserloggedin(){
+  if (localStorage.getItem('loggedinUser') !== null){
+    let userDataFromLocalStorage=JSON.parse(localStorage.getItem('loggedinUser'))
+    userloggedindisplay=userDataFromLocalStorage
+    setuserloggedin(userDataFromLocalStorage)
+    console.log(userDataFromLocalStorage)
+    setloginIcon(
+      <div className="login-container">
+        <img src={`https://robohash.org/nmn ${userDataFromLocalStorage.id}`} alt='user robot image' width="30px"/>
+        <Link href="/login/userProfile">
+        <p>{userDataFromLocalStorage.name}</p>
+        </Link>
+      </div>)
+    console.log("windows is working")
   }
+ }
 
   const contextvalue={
     currentUser: userloggedin,
     loginIcon:loginIcon,
-    casechange:changes,
+    // casechange:changes,
     changeINdex:indexState,
-    increaseIndex:true,
+    // increaseIndex:true,
     changeZ,
     switchToUser,
     signout,

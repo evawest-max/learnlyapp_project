@@ -1,8 +1,5 @@
 import "./footer.css"
-import facebook from "./facebook.svg"
-import instagram from "./instagram.svg"
-import whatsapp from "./whatsapp.svg"
-import copyright from "./copyright.svg"
+
 function Footer(){
     return(
         <div className="container">

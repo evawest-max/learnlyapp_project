@@ -1,14 +1,4 @@
-/* .advertcontainer{
-    padding-top: 0px;
-    animation: fade-slide-top .7s ease-in-out forwards;
-}
-.advert-img{
-    width: 100%;
-    object-fit: cover;
-    height: 180px;
-    cursor: pointer;
-    animation: fade-in 2s ease-in-out forwards;
-} */
+
 .movie-container{
     display: grid;
     grid-gap: 20px;
@@ -69,17 +59,7 @@
     cursor: pointer;
 }
 @media screen and (min-width:200px){
-    /* .advertcontainer{
-        padding-top: 0px;
-        animation: fade-slide-top .7s ease-in-out forwards;
-    }
-    .advert-img{
-        width: 100%;
-        object-fit: cover;
-        height: 180px;
-        cursor: pointer;
-        animation: fade-in 2s ease-in-out forwards;
-    } */
+    
     .movie-container{
         display: grid;
         grid-gap: 20px;
@@ -141,17 +121,6 @@
     }
 }
 @media screen and (min-width:300px){
-    /* .advertcontainer{
-        padding-top: 0px;
-        animation: fade-slide-top .7s ease-in-out forwards;
-    }
-    .advert-img{
-        width: 100%;
-        object-fit: cover;
-        height: 180px;
-        cursor: pointer;
-        animation: fade-in 2s ease-in-out forwards;
-    } */
     .movie-container{
         display: grid;
         grid-gap: 12px;
@@ -213,16 +182,6 @@
 }
 
 @media screen and (min-width:390px){
-    /* .advertcontainer{
-        padding-top: 0px;
-        
-    }
-    .advert-img{
-        width: 100%;
-        object-fit: cover;
-        height: 200px;
-        cursor: pointer;
-    } */
     .movie-container{
         display: grid;
         grid-gap: 10px;
@@ -284,16 +243,6 @@
 }
 
 @media screen and (min-width:540px){
-    /* .advertcontainer{
-        padding-top: 0px;
-        height: 355px;
-    }
-    .advert-img{
-        width: 100%;
-        object-fit: cover;
-        height: 270px;
-        cursor: pointer;
-    } */
     .movie-container{
         display: grid;
         grid-gap: 12px;
@@ -360,20 +309,6 @@
 }
 
 @media screen and (min-width:900px){
-    /* .advertcontainer{
-        display: flex;
-        justify-content: center;
-        padding-top: 0px;
-        height: 580px;
-        position: relative;
-    }
-    .advert-img{
-        width: 100%;
-        object-fit: cover;
-        height: 580px;
-        cursor: pointer;
-        margin-top: 0px;
-    } */
     .movie-container{
         display: grid;
         grid-gap: 20px;

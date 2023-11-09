@@ -101,12 +101,12 @@ function Signup() {
             </form>
             <button onClick={registerUser} className='signup-button'><strong>SIGN UP</strong></button>
             
+            <p className='login-options'>Or sign up using</p>
+            <div className='signip-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px"/></div>
             <h5 className='sign-in-button'>
               <p>I already Have an account?</p>
               <div><Link href="/login" >SIGN IN</Link></div>
             </h5>
-            <p className='login-options'>Or sign in using</p>
-            <div className='login-option-picture'>google</div>
           </div>
     </div>
   )
