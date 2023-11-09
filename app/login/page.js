@@ -81,7 +81,7 @@ function LoginPage() {
             <p className='login-forgot-password'>Forgot password?</p>
             <button className='login-button' onClick={submitlogin}><strong>SIGN IN</strong></button>
             <p className='login-options'>Or sign in using</p>
-            <div className='login-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px"/></div>
+            <div className='login-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px" height="30px"/></div>
             
             <h5 className='sign-up-button'>
               <p>I dont Have an account?</p>

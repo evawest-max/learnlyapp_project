@@ -107,8 +107,14 @@ function Cartprovider({children}) {
       </div>)
     }
     if (localStorage.getItem('account') !== null){
+      while(users.length>0){
+        users.pop()
+      }
     let accountDataFromLocalStorage=localStorage.getItem('account')
-    users.push(JSON.parse(accountDataFromLocalStorage))
+    let thedata=JSON.parse(accountDataFromLocalStorage)
+    thedata.forEach(element => {
+      users.push(element)
+    });
     }
   }
 

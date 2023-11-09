@@ -2,6 +2,7 @@
     background: #070917;
     margin-top: 30px;
     padding-top: 5px;
+    width: 100%;
 }
 .footer-container{
     display: flex;
@@ -81,7 +82,7 @@
 @media screen and (min-width:390px){
     .container{
         background: #070917;
-        width: auto;
+        width: 100%;
         margin: auto;
         margin-top: 30px;
     }
@@ -152,9 +153,9 @@
         flex-direction: row;
         justify-content: center;
     }
-    .copyright-para img{
+    /* .copyright-para img{
         
-    }
+    } */
 }
 
 @media screen and (min-width:540px){
@@ -240,7 +241,7 @@
     .container{
         background: #070917;
         width: 100%;
-        margin: auto;
+        /* margin: auto; */
         margin-top: 56px;  
     }
     .footer-container{

@@ -20,7 +20,7 @@ function Signup() {
     const [emailbordercolor, setemailbordercolor]=useState()
     const [createpasswordbordercolor, setcreatepasswordbordercolor]=useState()
     const [confirmpasswordbordercolor, setconfirmpasswordbordercolor]=useState()
-
+// localStorage.clear()
     let userexist=false
     const registerUser= ()=>{
       for (let i=0; i<users.length; i++){
@@ -35,16 +35,40 @@ function Signup() {
               if (emailref.current.value.includes("@") && !userexist){
                 if (createpasswordref.current.value===confirmpasswordref.current.value && confirmpasswordref.current.value.length>=6){
                   if (confirmpasswordref.current.value.includes(",")||confirmpasswordref.current.value.includes("@") ||confirmpasswordref.current.value.includes("#") ||confirmpasswordref.current.value.includes("$")||confirmpasswordref.current.value.includes("%")){
-                    let newaccount={
+                    let newuser={
                       id:users[users.length-1].id+1,
                       name:nameref.current.value,
                       email:emailref.current.value,
                       password:createpasswordref.current.value,
-                      phonenumber:"07020000000",
+                      phonenumber:phoneref.current.value,
+                      password: confirmpasswordref.current.value,
+                      numberOfOrders:0,
+                      pendingDispute:[
+                          {
+                              id:0,
+                              transction_refrence_id: 333278493,
+                              comments:"",
+                              date_of_transaction: "20/02/2023",
+                          },
+                          {
+                              id:1,
+                              transction_refrence_id: 936928493,
+                              comments:"the transction was cancelled but i was debited.",
+                              date_of_transaction: "13/04/2012",
+                          },
+                      ],
+                      learnlyPoints: 50,
                     }
-                    let stringobj=JSON.stringify(newaccount)
-                    localStorage.setItem("account",stringobj )
-                    console.log(stringobj)
+                    if(localStorage.getItem('account')!==null){
+                      let stringusers=localStorage.getItem('account')
+                      let objectusers=JSON.parse(stringusers)
+                      objectusers.push(newuser)
+                      localStorage.setItem('account', JSON.stringify(objectusers))
+                    }else{
+                      users.push(newuser)
+                      localStorage.setItem('account',JSON.stringify(users))
+                    }
+                    console.log(users)
                     
                     setnamebordercolor({border: "2px solid green"})
                     setphonenumberbordercolor({border: "2px solid green"})
@@ -107,7 +131,7 @@ function Signup() {
             <button onClick={registerUser} className='signup-button'><strong>SIGN UP</strong></button>
             
             <p className='login-options'>Or sign up using</p>
-            <div className='signip-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px"/></div>
+            <div className='signip-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px" height="30px"/></div>
             <h5 className='sign-in-button'>
               <p>I already Have an account?</p>
               <div><Link href="/login" >SIGN IN</Link></div>

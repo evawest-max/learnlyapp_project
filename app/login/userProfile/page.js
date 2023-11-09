@@ -66,7 +66,6 @@ function UserProfile() {
     function saveNewUserData(){
       if (nameref.current.value.length>4){
         if (phoneref.current.value.length===11){
-          
           users.map((item)=>{
             let check=JSON.parse(localStorage.getItem('loggedinUser'))
             if (item.id===check.id){
