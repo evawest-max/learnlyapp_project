@@ -22,7 +22,7 @@ function Navbar() {
         <div onClick={menuclose} className="nav-transparent-background"></div>
       <nav>
         <div className="menubutton-mobile" style={{}} onClick={menuclose}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgRlTB2JB2JuLXGP2PiBdJW-eKEnOezFn8w&usqp=CAU" 
-        alt="close image" width="25px"/></div>
+        alt="close image" width="25px" height="25px"/></div>
           <ul>
           <div>
             <Link href="/">Homepage</Link>
