@@ -39,7 +39,8 @@ function Signup() {
                       id:users[users.length-1].id+1,
                       name:nameref.current.value,
                       email:emailref.current.value,
-                      password:createpasswordref.current.value
+                      password:createpasswordref.current.value,
+                      phonenumber:"07020000000",
                     }
                     let stringobj=JSON.stringify(newaccount)
                     localStorage.setItem("account",stringobj )

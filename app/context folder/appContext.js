@@ -11,10 +11,7 @@ let changes=false
 export const Cartcontext= createContext({
   currentUser: 0,
   loginIcon:0,
-  // casechange:changes,
   changeINdex:0,
-  // totalItemInCart:0,
-  // items:cartproducts,
   changeZ:()=>{},
   switchToUser:()=>{},
   signout:()=>{},
@@ -25,6 +22,7 @@ function Cartprovider({children}) {
 
   const [indexState, setindexState]=useState({ zIndex:"2" })
   function changeZ(){
+    // this function sets the index of the zindex of the searchbar and mobile menu
     changes=!changes
     changes? setindexState({ zIndex:"0" }):setindexState({zIndex:"1"})
   } 
@@ -41,6 +39,7 @@ function Cartprovider({children}) {
   let userloggedindisplay={}
 
   function switchToUser(index){
+    // this function switch SIGN IN/SIGN UP to user image and name
     setuserloggedin({...users[index], password:"*******"})
     userloggedindisplay={...users[index], password:"*******"}
     
@@ -62,6 +61,7 @@ function Cartprovider({children}) {
   }
 
   function signout(){
+    //this account reset the username and image text to SIGN IN/SIGN UP
     setloginIcon(
       <div className="login-container">
         <img src='https://cdn-icons-png.flaticon.com/512/3177/3177440.png' alt='user robot image' width="30px"/>
@@ -73,6 +73,7 @@ function Cartprovider({children}) {
   }
 
   function deleteUserAccount(index){
+    // this function deletes the user account from database and localstorage
     localStorage.removeItem('loggedinUser')
     localStorage.removeItem('account')
     users.splice(index, 1)
@@ -85,12 +86,14 @@ function Cartprovider({children}) {
         </Link>
       </div>)
   }
+
   useEffect(() => {
+    // useffect calls a keepuserloggedin() function to keep use signed in when the browser reloads
     keepuserloggedin()
  }, []);
 
- function keepuserloggedin(){
-  if (localStorage.getItem('loggedinUser') !== null){
+  function keepuserloggedin(){
+    if (localStorage.getItem('loggedinUser') !== null){
     let userDataFromLocalStorage=JSON.parse(localStorage.getItem('loggedinUser'))
     userloggedindisplay=userDataFromLocalStorage
     setuserloggedin(userDataFromLocalStorage)
@@ -102,22 +105,17 @@ function Cartprovider({children}) {
         <p>{userDataFromLocalStorage.name}</p>
         </Link>
       </div>)
-    console.log("windows is working")
-  }
-  if (localStorage.getItem('account') !== null){
+    }
+    if (localStorage.getItem('account') !== null){
     let accountDataFromLocalStorage=localStorage.getItem('account')
     users.push(JSON.parse(accountDataFromLocalStorage))
-    
-    console.log(users)
+    }
   }
- }
-// localStorage.clear()
+
   const contextvalue={
     currentUser: userloggedin,
     loginIcon:loginIcon,
-    // casechange:changes,
     changeINdex:indexState,
-    // increaseIndex:true,
     changeZ,
     switchToUser,
     signout,
