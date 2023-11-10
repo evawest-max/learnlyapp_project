@@ -70,6 +70,12 @@
     color: purple;
     animation: fade-slide-right 1s cubic-bezier(0,1,0,1) forwards;
 }
+.menubutton-mobile-close{
+    position: fixed;
+    width: 25px;
+    left: 270px;
+    top: 20px;
+}
 .Sign-menu nav ul div {
     align-items: center;
     display: flex;

@@ -25,7 +25,6 @@ function UserProfile() {
       </div>)
     }
     function deleteAccount(){
-      localStorage.removeItem('account')
       users.map((item, index)=>{
         if (item.id===cart.currentUser.id){
           cart.deleteUserAccount(index)

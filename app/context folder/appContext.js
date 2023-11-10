@@ -74,10 +74,10 @@ function Cartprovider({children}) {
 
   function deleteUserAccount(index){
     // this function deletes the user account from database and localstorage
-    localStorage.removeItem('loggedinUser')
-    localStorage.removeItem('account')
+    // localStorage.removeItem('loggedinUser')
     users.splice(index, 1)
     setuserloggedin({pendingDispute:[]})
+    localStorage.setItem('account', JSON.stringify(users))
     setloginIcon(
       <div className="login-container">
         <img src='https://cdn-icons-png.flaticon.com/512/3177/3177440.png' alt='user robot image' width="30px"/>

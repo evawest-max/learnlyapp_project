@@ -11,7 +11,6 @@ let signup="sign in"
 let signstate=true
 function Navbar() {
   const cart=useContext(Cartcontext)
-
   const [menustate, newMenuState]=useState(<div className="menubutton-mobile" onClick={openMenu}><img src="https://static.thenounproject.com/png/5238032-200.png" alt="open menu" width="25px"/></div>)
   function openMenu(){
     cart.increaseIndex=true
@@ -21,13 +20,13 @@ function Navbar() {
       <div>
         <div onClick={menuclose} className="nav-transparent-background"></div>
       <nav>
-        <div className="menubutton-mobile" style={{}} onClick={menuclose}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgRlTB2JB2JuLXGP2PiBdJW-eKEnOezFn8w&usqp=CAU" 
+        <div className="menubutton-mobile-close" style={{}} onClick={menuclose}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgRlTB2JB2JuLXGP2PiBdJW-eKEnOezFn8w&usqp=CAU" 
         alt="close image" width="25px" height="25px"/></div>
           <ul>
           <div>
-            <Link href="/">Homepage</Link>
-            <Link href="/special">About us</Link>
-            <Link href="/track">Popular movies</Link>
+            <Link onClick={menuclose} href="/">Homepage</Link>
+            <Link onClick={menuclose} href="/">About us</Link>
+            <Link onClick={menuclose} href="/">Popular movies</Link>
           </div>
           </ul>
       </nav>
