@@ -24,9 +24,9 @@ function Navbar() {
         alt="close image" width="25px" height="25px"/></div>
           <ul>
           <div>
-            <Link onClick={menuclose} href="/">Homepage</Link>
-            <Link onClick={menuclose} href="/">About us</Link>
-            <Link onClick={menuclose} href="/">Popular movies</Link>
+            <Link onClick={menuclose} href="/"><img src="https://cdn-icons-png.flaticon.com/512/6989/6989969.png" width="25px" height="25px" alt="home_pic"/>Homepage</Link>
+            <Link onClick={menuclose} href="/"><img src="https://icon-library.com/images/about-us-icon-png/about-us-icon-png-20.jpg" width="25px" height="25px" alt="about_pic"/> About us</Link>
+            <Link onClick={menuclose} href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comedy_film_icon.svg/1024px-Comedy_film_icon.svg.png" width="25px" height="25px" alt="popular_video_pic"/> Popular movies</Link>
           </div>
           </ul>
       </nav>
