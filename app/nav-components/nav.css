@@ -2,10 +2,12 @@
 .everything{
     display: flex;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 1;
     background-color: white;
+    right: 0px;
+    left: 0px;
 }
 .login-container a p{
     width: 15px;
@@ -151,10 +153,12 @@
     .everything{
         display: flex;
         justify-content: center;
-        position: sticky;
+        position: fixed;
         top: 0px;
         z-index: 1;
         background-color: white;
+        right: 10px;
+        left: 10px;
     }
     .navcontainer-mobile{
         display: none;
@@ -163,8 +167,12 @@
         -webkit-animation: slide-out 2s forwards;
     }
 
+    .navcontainer{
+        display: flex;
+        justify-content: center;
+    }
     .navcontainer nav{
-        margin: 0px 160px;
+        /* margin: 0px 160px; */
         margin-top: 10px;
         width: fit-content;
         min-width: 380px;
@@ -175,7 +183,6 @@
         gap: 25px;
         padding: 0px 20px;
         width: fit-content;
-        
     }
     .navcontainer nav ul a{
         color: purple;
@@ -198,7 +205,6 @@
     .logo{
         width: 80px;
         height: 80px;
-        margin-right: 172;
         cursor: pointer;
     }
     .login-container{
