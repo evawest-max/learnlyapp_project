@@ -17,7 +17,7 @@ function UserProfile() {
     const [deleteButton, setdeleteButton]=useState(<button id='delete-button' onClick={switchDeletebutton}>Delete my account</button>)
     function switchDeletebutton(){
       setdeleteButton(<div>
-        <h3>Are you sure? <br/>if you delete account all your records will be lost for ever.</h3>
+        <h3>Are you sure? <br/>if you delete account all your records will be lost forever.</h3>
         <div>
           <Link href="/signup"><button onClick={deleteAccount} id='delete-button'>Yes</button></Link>
           <button onClick={switchBackToDeletebutton} id='edit-button'>No</button>

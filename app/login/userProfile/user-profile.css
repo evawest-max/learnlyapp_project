@@ -1,6 +1,7 @@
 .profileContainer{
     text-align: center;
     color: purple;
+    margin-top: 90px;
 }
 #profile-welcome{
     font-size: 24px;

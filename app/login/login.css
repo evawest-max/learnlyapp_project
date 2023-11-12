@@ -1,6 +1,7 @@
 
 .login{
     align-items: center;
+    margin-top: 80px;
     background: radial-gradient(61.32% 53.53% at 33.80% 48.98%, rgb(78, 1, 97), #01000A 100%);
 }
 .login-title{

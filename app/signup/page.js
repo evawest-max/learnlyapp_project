@@ -81,7 +81,6 @@ function Signup() {
                       email:emailref.current.value,
                       password:createpasswordref.current.value,
                       phonenumber:phoneref.current.value,
-                      password: confirmpasswordref.current.value,
                       numberOfOrders:0,
                       pendingDispute:[
                           {
