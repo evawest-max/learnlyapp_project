@@ -44,17 +44,6 @@ function LoginPage() {
     }
   }
 
-  const [signinsuccessful, setsigninsuccessful]=useState(false)
-  
-  function validateEmailAndPassword(){
-    for (let i=0; i<users.length; i++){
-      if (users[i].email===emailRef.current.value){
-        if(users[i].password===passwardRef.current.value){
-          setsigninsuccessful(true)
-        }
-      } 
-    }
-  }
 
   function submitlogin(){
     for (let i=0; i<users.length; i++){
@@ -87,10 +76,10 @@ function LoginPage() {
               <label>E-mail</label>
               <input onBlur={validateEmail} style={emailbordercolor} ref={emailRef} type='email' placeholder='example@yahoo.com'/><br/>
               <label>Password</label>
-              <input onBlur={validateEmailAndPassword} style={passwordbordercolor} ref={passwardRef} type='password' placeholder='********'/>
+              <input style={passwordbordercolor} ref={passwardRef} type='password' placeholder='********'/>
             </form>
             <p className='login-forgot-password'>Forgot password?</p>
-            <Link onClick={submitlogin} to={signinsuccessful && '/user-profile'}><button className='login-button'><strong>SIGN IN</strong></button></Link>
+            <button className='login-button' onClick={submitlogin}><strong>SIGN IN</strong></button>
             <p className='login-options'>Or sign in using</p>
             <div className='login-option-picture'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png' alt='google image' width="30px" height="30px"/></div>
             
